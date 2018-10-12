@@ -7,6 +7,7 @@
  */
 
 import React, {Component} from 'react';
+import Judul from './Components/Judul';
 import {Platform, StyleSheet, Text, View, Image} from 'react-native';
 
 const instructions = Platform.select({
@@ -21,13 +22,16 @@ export default class App extends Component<Props> {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>Welcome to React Native!</Text>
+      <Judul judul="BIODATA"/>
+      <Judul judul="LOGIN"/>
+      <Judul judul="FORM"/>
+      <Image
+          style={{width: 200, height: 200}}
+          source={require('./me.jpg')}/>
         <Text style={styles.instructions}>Nama : Agya Rahmani Divasasri</Text>
         <Text style={styles.instructions}>Kelas : XI RPL 1</Text>
         <Text style={styles.instructions}>No. Absen : 02</Text>
-        <Image
-          style={{width: 200, height: 200}}
-          source={require('./me.jpg')}/>
+        
       </View>
     );
   }
